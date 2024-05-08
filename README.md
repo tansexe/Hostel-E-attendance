@@ -13,7 +13,7 @@ git clone https://github.com/tansexe/Hostel-E-attendance.git
 - Install dependencies:
 
 ```
-cd krs-backend
+cd Hostel-E-attendance
 npm install
 ```
 
@@ -28,4 +28,3 @@ The server will listen on port 3000 by default.
 
 For Detailed Documentation: 
 https://docs.google.com/document/d/1fQA0ZqEejfc6uKIPDRRjMEuJKKjD4lSadA-fMyULxXo/edit?usp=sharing
-Follow this link. 
