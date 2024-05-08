@@ -11,7 +11,7 @@ const usersSchema = new mongoose.Schema({
   },
   Hostel: {
     type: String,
-    required: true,
+    required: true
   },
   Email: {
     type: String,

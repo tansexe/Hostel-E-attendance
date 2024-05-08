@@ -6,7 +6,7 @@ const { users } = require("./roles/data.js");
 const { authUser } = require("./roles/basicAuth.js");
 require("dotenv").config();
 
-// cros
+// cors
 app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader(
