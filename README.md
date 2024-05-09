@@ -1,9 +1,9 @@
 # Hostel-E-attendance
 
-### Description:
+## Description:
 Designed a basic project, a simple website integrated into the ML model for tracking the attendance of the hostellers. 
 
-### Running the project locally: 
+## Running the project locally: 
 - Clone the repository:
 
 ```
@@ -26,12 +26,12 @@ npm start
 The server will listen on port 3000 by default.
 
 
-#### After Cloning, the Explorer will have these folders:
+### After Cloning, the Explorer will have these folders:
 1. Backend-E-Attendance 
 2. Face-Detection
 3. Frontend-Vite
 
-### Frontend Documentation:
+## Frontend Documentation:
 The Frontend-Vite folder contains the folder for the frontend. 
 
 At the heart of the Frontend-Vite folder is the src folder. Within this folder, several subfolders have important roles:
@@ -42,7 +42,7 @@ At the heart of the Frontend-Vite folder is the src folder. Within this folder, 
 
 Additionally, App.jsx enlists the components to be rendered from different routes. For the routing of pages in React, React-Router-Dom, a third-party library, is integrated.
 
-### Backend Documentation: 
+## Backend Documentation: 
 The Backend-E-attendance folder contains the folder for the backend.
 
 ### Routing Guide
@@ -62,3 +62,8 @@ This project has the following endpoints:
 If you encounter any issues while using the Hostel-E-attendance, consider the following troubleshooting steps:
 1. Check Dependencies: Ensure you have installed all required dependencies.
 2. Review Error Messages: If you encounter any errors, carefully review the error messages to identify the source of the issue.
+
+## References 
+1. JavaScript API for Face Recognition in the Browser with tensorflow.js [Link]([https://www.sciencedirect.com/science/article/pii/S1877050918320301](https://itnext.io/face-api-js-javascript-api-for-face-recognition-in-the-browser-with-tensorflow-js-bcc2a6c4cf07))
+2. Github Repository of faceAPI.js [Link](https://github.com/justadudewhohacks/face-api.js)
+3. Github Repository of face Detection [Link](https://github.com/WebDevSimplified/Face-Detection-JavaScript)
