@@ -53,6 +53,6 @@ This project has the following endpoints:
 
 | Methods | Route                 | Description              | Request                                        | Response                                                           |
 | ------- | --------------------- | ------------------------ | ---------------------------------------------- | ------------------------------------------------------------------ |
-| GET    | `/users/getAllUsers` | To get the info of all users.            | name, email, message                           | 'Send' if the mail was send successfully    |                                                                   
-| GET     | `/api/user/add`       | Add User                 | name, email, image, roll, branch, year, number | message: "User Added", user {name, email, pic, roll, year, branch} |
-| GET     | `/api/user/`          | Get the Events (of User) | email                                          | { users, userevents: events }                                      |
+| GET    | `/users/getAllUsers` | To get the info of all users.            | _id, Username, RollNo, Hostel, Email, Password, Phone                          | All the User details are sent.  |                                                                   
+| POST     | `/users/Signup`       | Registering all the users            | Username, RollNo, Hostel, Email, Password, Phone  | success: True/False |
+| POST   | `/users/Login`     |  Logging all the users |    email, password, Username | message: User found or not| 
