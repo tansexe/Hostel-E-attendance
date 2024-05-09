@@ -32,12 +32,27 @@ The server will listen on port 3000 by default.
 3. Frontend-Vite
 
 ### Frontend Documentation:
-The Frontend-Vite file contains the folder for frontend. 
+The Frontend-Vite folder contains the folder for the frontend. 
 
 At the heart of the Frontend-Vite folder is the src folder. Within this folder, several subfolders have important roles:
 
 1. Assets: This folder houses all the images utilized in the project.
-2. Components: This folder consists of reusable elements such as buttons, navigation bars, and headers.
+2. Components: This folder includes reusable elements such as buttons, navigation bars, and headers.
 3. Pages: This folder encompasses all the web pages of the website.
 
 Additionally, App.jsx enlists the components to be rendered from different routes. For the routing of pages in React, React-Router-Dom, a third-party library, is integrated.
+
+### Backend Documentation: 
+The Backend-E-attendance folder contains the folder for the backend.
+
+### Routing Guide
+
+This project has the following endpoints:
+
+### User
+
+| Methods | Route                 | Description              | Request                                        | Response                                                           |
+| ------- | --------------------- | ------------------------ | ---------------------------------------------- | ------------------------------------------------------------------ |
+| GET    | `/users/getAllUsers` | To get the info of all users.            | name, email, message                           | 'Send' if the mail was send successfully    |                                                                   
+| GET     | `/api/user/add`       | Add User                 | name, email, image, roll, branch, year, number | message: "User Added", user {name, email, pic, roll, year, branch} |
+| GET     | `/api/user/`          | Get the Events (of User) | email                                          | { users, userevents: events }                                      |
