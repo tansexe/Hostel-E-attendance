@@ -64,6 +64,6 @@ If you encounter any issues while using the Hostel-E-attendance, consider the fo
 2. Review Error Messages: If you encounter any errors, carefully review the error messages to identify the source of the issue.
 
 ## References 
-1. JavaScript API for Face Recognition in the Browser with tensorflow.js [Link]([https://www.sciencedirect.com/science/article/pii/S1877050918320301](https://itnext.io/face-api-js-javascript-api-for-face-recognition-in-the-browser-with-tensorflow-js-bcc2a6c4cf07))
-2. Github Repository of faceAPI.js [Link](https://github.com/justadudewhohacks/face-api.js)
-3. Github Repository of face Detection [Link](https://github.com/WebDevSimplified/Face-Detection-JavaScript)
+1. JavaScript API for Face Recognition in the Browser with tensorflow.js. [Link](https://itnext.io/face-api-js-javascript-api-for-face-recognition-in-the-browser-with-tensorflow-js-bcc2a6c4cf07)
+2. Github Repository of faceAPI.js. [Link](https://github.com/justadudewhohacks/face-api.js)
+3. Github Repository of face Detection. [Link](https://github.com/WebDevSimplified/Face-Detection-JavaScript)
