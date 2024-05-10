@@ -7,6 +7,9 @@ Designed a simple website integrated into the ML model for tracking the attendan
 1. MERN Stack 
 2. Face API 
 
+## Flow Chart of the Project: 
+![Web Dev Project-Students Flow](https://github.com/tansexe/Hostel-E-attendance/assets/112875959/9c471938-f2c1-4667-b843-341ab36506ac)
+
 ## Running the project locally: 
 - Clone the repository:
 
