@@ -43,8 +43,18 @@ At the heart of the Frontend-Vite folder is the src folder. Within this folder, 
 Additionally, App.jsx enlists the components to be rendered from different routes. For the routing of pages in React, React-Router-Dom, a third-party library, is integrated.
 
 ### Screenshots 
-<img width="600" alt="image" src="https://github.com/tansexe/Hostel-E-attendance/assets/112875959/afc83d99-867a-48dc-b37f-2e27488055c2">
 
+#### Home Page 
+<img width="957" alt="image" src="https://github.com/tansexe/Hostel-E-attendance/assets/112875959/afc83d99-867a-48dc-b37f-2e27488055c2">
+
+#### Register Page
+<img width="960" alt="image" src="https://github.com/tansexe/Hostel-E-attendance/assets/112875959/059552a3-0353-4461-b512-26695738d19a">
+
+#### Login Page
+![image](https://github.com/tansexe/Hostel-E-attendance/assets/112875959/569a5c35-fb9f-439a-a38f-4cba9094b1b5)
+
+#### Face  Detection Model 
+<img width="960" alt="image" src="https://github.com/tansexe/Hostel-E-attendance/assets/112875959/f80e2ab5-8bd6-492c-9d07-a44afbd615e6">
 
 ## Backend Documentation: 
 The Backend-E-attendance folder contains the folder for the backend.
