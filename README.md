@@ -4,8 +4,8 @@
 Designed a simple website integrated into the ML model for tracking the attendance of the hostellers. 
 
 ## Tech Stack Used: 
-MERN Stack 
-Face API 
+1. MERN Stack 
+2. Face API 
 
 ## Running the project locally: 
 - Clone the repository:
