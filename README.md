@@ -43,7 +43,7 @@ At the heart of the Frontend-Vite folder is the src folder. Within this folder, 
 Additionally, App.jsx enlists the components to be rendered from different routes. For the routing of pages in React, React-Router-Dom, a third-party library, is integrated.
 
 ### Screenshots 
-<img width="957" alt="image" src="https://github.com/tansexe/Hostel-E-attendance/assets/112875959/afc83d99-867a-48dc-b37f-2e27488055c2">
+<img width="600" alt="image" src="https://github.com/tansexe/Hostel-E-attendance/assets/112875959/afc83d99-867a-48dc-b37f-2e27488055c2">
 
 
 ## Backend Documentation: 
