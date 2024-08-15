@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Face Detection</title>
+  <script defer src="face-api.min.js"></script>
+  <script defer src="script.js"></script>
+  <style>
+    /* Global Styles */
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #1a1a2e, #16213e);
+      font-family: 'Arial', sans-serif;
+      overflow: hidden;
+    }
+
+    /* Video Container */
+    #video {
+      border-radius: 15px;
+      box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+      border: 5px solid rgba(255, 255, 255, 0.1);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    #video:hover {
+      transform: scale(1.02);
+    }
+
+    /* Canvas Styling */
+    canvas {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 15px;
+    }
+
+    /* Custom button */
+    .btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      padding: 10px 20px;
+      background-color: #3a3a67;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #5353a6;
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+
+<body>
+  <video id="video" width="720" height="560" autoplay muted></video>
+  <button class="btn">Start Detection</button>
+</body>
+
+</html>
