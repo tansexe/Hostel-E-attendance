@@ -6,7 +6,7 @@ import { Routes, Route } from "react-router-dom";
 import Signup from "./pages/Signup/Signup";
 import Home from "./pages/Home/Home";
 import Login from "./pages/Login/Login";
-import Detection from "./pages/Detection/detection";
+import Detection from "./pages/Detection/Detection";
 
 function App() {
   return (
