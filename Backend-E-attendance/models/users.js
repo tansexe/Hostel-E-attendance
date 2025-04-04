@@ -1,21 +1,32 @@
-const mongoose = require("mongoose");
+import { Schema, model } from "mongoose";
+import { hash } from "bcrypt";
+const saltRounds = 10;
 
-const usersSchema = new mongoose.Schema({
+const usersSchema = new Schema({
   Username: {
     type: String,
     required: true,
+    unique: true,
   },
   RollNo: {
     type: Number,
     required: true,
+    unique: true,
   },
   Hostel: {
     type: String,
-    required: true
+    required: true,
   },
   Email: {
     type: String,
     required: true,
+    unique: true,
+    validate: {
+      validator: function (v) {
+        return /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}/.test(v);
+      },
+      message: (props) => `${props.value} is not a valid email address!`,
+    },
   },
   Password: {
     type: String,
@@ -27,28 +38,31 @@ const usersSchema = new mongoose.Schema({
   },
 });
 
-usersSchema.statics.isThisEmailInUse = async function (Email) {
+usersSchema.statics.isEmailInUse = async function (Email) {
   try {
     const sameEmailUser = await this.findOne({ Email });
-    if (sameEmailUser) return false;
-
-    return true;
+    return !sameEmailUser;
   } catch (error) {
-    console.log("error inside isThisEmailInUse method", error.message);
+    console.error("Error inside isEmailInUse method", error);
     return false;
   }
 };
 
-usersSchema.statics.isThisUsernameInUse = async function (Username) {
+usersSchema.statics.isUsernameInUse = async function (Username) {
   try {
     const sameUsernameUser = await this.findOne({ Username });
-    if (sameUsernameUser) return false;
-
-    return true;
+    return !sameUsernameUser;
   } catch (error) {
-    console.log("error inside isThisUsernameInUse method", error.message);
+    console.error("Error inside isUsernameInUse method", error);
     return false;
   }
 };
 
-module.exports = mongoose.model("users", usersSchema);
+usersSchema.pre("save", async function (next) {
+  if (this.isModified("Password")) {
+    this.Password = await hash(this.Password, saltRounds);
+  }
+  next();
+});
+
+export default model("User", usersSchema);

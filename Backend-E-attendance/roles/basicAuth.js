@@ -6,6 +6,6 @@ function authUser(req, res, next) {
   next();
 }
 
-module.exports = {
+export default {
   authUser,
 };

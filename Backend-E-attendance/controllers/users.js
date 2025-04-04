@@ -1,14 +1,14 @@
-const users = require("../models/users");
-const bcrypt = require("bcrypt");
-const dotenv = require("dotenv");
-const jwt = require("jsonwebtoken");
-dotenv.config();
+import users, { find, isThisEmailInUse, isThisUsernameInUse, findOne } from "../models/users";
+import { hash, compare } from "bcrypt";
+import { config } from "dotenv";
+import { sign } from "jsonwebtoken";
+config();
 const SECRET_KEY = process.env.SECRET_KEY;
 
 // Getting All
 const getAllUsers = async (req, res) => {
   try {
-    const user = await users.find();
+    const user = await find();
     res.json(user);
   } catch (err) {
     res.status(500).json({ message: err.message });
@@ -31,11 +31,11 @@ const register = async (req, res) => {
     });
     const data = req.body;
     //hashpassword
-    const hashpassword = await bcrypt.hash(data.Password, 10);
+    const hashpassword = await hash(data.Password, 10);
     //phone in numbers format
     const phone = Number(data.Phone);
     // email address unique
-    const isNewUser = await users.isThisEmailInUse(req.body.Email);
+    const isNewUser = await isThisEmailInUse(req.body.Email);
     if (!isNewUser) {
       return res.json({
         success: false,
@@ -43,7 +43,7 @@ const register = async (req, res) => {
       });
     }
     // username unique
-    const isNewUsers = await users.isThisUsernameInUse(req.body.Username);
+    const isNewUsers = await isThisUsernameInUse(req.body.Username);
     if (!isNewUsers) {
       return res.json({
         success: false,
@@ -60,7 +60,7 @@ const register = async (req, res) => {
     });
     const savedUser = await newUsers.save();
     //token
-    const token = jwt.sign(
+    const token = sign(
       {
         email: savedUser.Email,
         password: savedUser.Password,
@@ -80,17 +80,17 @@ const register = async (req, res) => {
 const login = async (req, res) => {
   const { email, password } = req.body;
   try {
-    const savedUser = await users.findOne({ Email: email });
+    const savedUser = await findOne({ Email: email });
     if (!savedUser) {
       return res.status(404).json({ message: "User not found" });
     }
 
-    const matchPassword = await bcrypt.compare(password, savedUser.Password);
+    const matchPassword = await compare(password, savedUser.Password);
     if (!matchPassword) {
       return res.status(400).json({ message: "Invalid credentials" });
     }
 
-    const token = jwt.sign(
+    const token = sign(
       {
         email: savedUser.Email,
         password: savedUser.Password,
@@ -106,7 +106,7 @@ const login = async (req, res) => {
   }
 };
 
-module.exports = {
+export default {
   getAllUsers,
   register,
   login,
